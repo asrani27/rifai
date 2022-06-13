@@ -52,6 +52,10 @@
                                     <td>
                                         <a href="/superadmin/penanganan/edit/{{$item->id}}"
                                             class="btn btn-sm btn-outline-info">Proses</a>
+                                        <a href="/superadmin/penanganan/suratpenunjukan/{{$item->id}}"
+                                            class="btn btn-sm btn-outline-info" target="_blank">Surat Penunjukan</a>
+                                        <a href="/superadmin/penanganan/suratpanggilan/{{$item->id}}"
+                                            class="btn btn-sm btn-outline-info" target="_blank">Surat Panggilan</a>
                                     </td>
                                 </tr>
                                 @endforeach

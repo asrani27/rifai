@@ -34,6 +34,9 @@ Route::group(['middleware' => ['auth', 'role:superadmin']], function () {
     Route::get('/superadmin/penanganan/edit/{id}', 'SuperadminController@penangananedit');
     Route::post('/superadmin/penanganan/edit/{id}', 'SuperadminController@penangananupdate');
 
+    Route::get('/superadmin/penanganan/suratpenunjukan/{id}', 'SuperadminController@surat1');
+    Route::get('/superadmin/penanganan/suratpanggilan/{id}', 'SuperadminController@surat2');
+
     Route::get('/superadmin/jenispengaduan', 'SuperadminController@jenispengaduan');
     Route::get('/superadmin/jenispengaduan/create', 'SuperadminController@jenispengaduancreate');
     Route::post('/superadmin/jenispengaduan/create', 'SuperadminController@jenispengaduanstore');

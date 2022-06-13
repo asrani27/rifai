@@ -274,6 +274,19 @@ class SuperadminController extends Controller
         return view('superadmin.laporan.index');
     }
 
+    public function surat1($id)
+    {
+        $data = Pengaduan::find($id);
+        $pdf = PDF::loadView('superadmin.laporan.surat_penunjukan', compact('data'))->setPaper('legal');
+        return $pdf->stream();
+    }
+
+    public function surat2($id)
+    {
+        $data = Pengaduan::find($id);
+        $pdf = PDF::loadView('superadmin.laporan.surat_panggilan', compact('data'))->setPaper('legal');
+        return $pdf->stream();
+    }
     public function exportpdf(Request $req)
     {
         //dd($req->all());
